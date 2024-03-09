@@ -15,6 +15,7 @@ import { AgentListComponent } from './agents/agent-list/agent-list.component';
 import { AgentComponent } from './agents/agent/agent.component';
 import { ChatComponent } from './chat/chat.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import { JobDetailsComponent } from './job-details/job-details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    HttpClientModule, 
     ReactiveFormsModule
     
   ],

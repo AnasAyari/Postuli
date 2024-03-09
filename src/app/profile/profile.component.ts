@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,8 +11,9 @@ export class ProfileComponent {
   skills: string[] = ['JavaScript', 'React', 'Node.js', 'HTML/CSS', 'Tailwind CSS']; // Initial skills
   open:boolean = false;
   openExperience:boolean = false;
+  user!:any
 
-  constructor() { }
+  constructor(private uService:UserService) { }
 
   addExperience() {
     // Implement logic to add a new experience
@@ -37,5 +39,12 @@ export class ProfileComponent {
 
   worker:boolean=true;
   diffrent:boolean=true;
+
+  ngOnInit(){
+    this.uService.user.subscribe((res)=>{
+      console.log("res",res);
+      this.user=res
+    })
+  }
 
 }

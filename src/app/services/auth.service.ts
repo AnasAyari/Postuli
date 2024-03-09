@@ -12,11 +12,11 @@ export class AuthService {
   constructor(private http:HttpClient,private router:Router) { }
 
   signup(form:any):Observable<any>{
-    return this.http.post<any>(this.url+'/auth/signup',form)
+    return this.http.post<any>(this.url+'/signup',form)
   }
 
   login(form:any):Observable<any>{
-    return this.http.post<any>(this.url+"/auth/login",form)
+    return this.http.post<any>(this.url+"/login",form)
   }
 
   logout(){

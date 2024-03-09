@@ -17,7 +17,8 @@ const routes: Routes = [
   {path:"profile",component:ProfileComponent},
   {path:"freeAgents",component:AgentListComponent},
   {path:"login",component:LoginComponent},
-  {path:"signup",component:SingupComponent}
+  {path:"signup",component:SingupComponent},
+  {path:"",redirectTo:"home",pathMatch:'full'},
 ];
 
 @NgModule({
