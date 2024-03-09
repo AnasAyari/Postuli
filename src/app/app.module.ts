@@ -5,10 +5,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './landing/header/header.component';
 import { BodyComponent } from './landing/body/body.component';
 import { FooterComponent } from './landing/footer/footer.component';
-import { LoginComponent } from './forms/login/login.component';
+import { ApplicationsComponent } from './applications/applications.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './forms/login/login.component';
 import { SingupComponent } from './forms/singup/singup.component';
-import { ApplicationComponent } from './application/application.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SingleApplicationComponent } from './single-application/single-application.component';
+import { AgentListComponent } from './agents/agent-list/agent-list.component';
+import { AgentComponent } from './agents/agent/agent.component';
+import { ChatComponent } from './chat/chat.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
+
 
 @NgModule({
   declarations: [
@@ -18,14 +25,23 @@ import { ApplicationComponent } from './application/application.component';
     FooterComponent,
     LoginComponent,
     SingupComponent,
-    ApplicationComponent
+    ProfileComponent,
+    ApplicationsComponent,
+    SingleApplicationComponent,
+    AgentListComponent,
+    AgentComponent,
+    ChatComponent,
+    JobDetailsComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
     ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
