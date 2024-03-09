@@ -14,6 +14,7 @@ import { SingleApplicationComponent } from './single-application/single-applicat
 import { AgentListComponent } from './agents/agent-list/agent-list.component';
 import { AgentComponent } from './agents/agent/agent.component';
 import { ChatComponent } from './chat/chat.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ChatComponent } from './chat/chat.component';
     SingleApplicationComponent,
     AgentListComponent,
     AgentComponent,
-    ChatComponent
+    ChatComponent,
+    JobDetailsComponent 
   ],
   imports: [
     BrowserModule,
