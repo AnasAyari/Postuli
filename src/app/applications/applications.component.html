@@ -1,14 +1,9 @@
-
-<div class="bg-background h-full flex justify-center   ">
-        
-        <div class="flex mt-40 w-full  my-20 mx-20 rounded-xl ">
-            <div class="w-3/12 ml-6 p-6  shadow-lg rounded-lg h-96 bg-white bg-gradient-to-t from-background">
-                
+<div class="bg-zinc-100">
+    <h1 class="font-bold text-6xl pl-12 pt-12"><span class="text-main">Job</span> opportunities</h1>
+    <div class="flex justify-center">
+        <div class="flex my-12 w-full mx-20 rounded-xl ">
+            <div class="w-3/12 ml-6 p-6  shadow-lg rounded-lg h-96 bg-white">
                 <form class="max-w-sm mx-auto">
-                    <div class="mb-5">
-                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Search</label>
-                        <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
-                    </div>
                     <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select 1</label>
                     <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option value="">test</option>
@@ -22,12 +17,22 @@
                     <button type="submit" class="mt-5 text-white bg-main hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                 </form>
             </div>
-            <div class="w-9/12 mr-10 p-6 object-contain rounded-s" >
-                <h1 class="mb-6">Applications</h1>
+            <div class="w-9/12 mr-10 px-6 object-contain rounded-s" >
+                <div class="mb-4 flex items-center">
+                    <input type="text"
+                                name="search"
+                                placeholder="Search..."
+                                autocomplete="off"
+                                aria-label="Search"
+                                class="bg-gray-50 text-gray-500 rounded-l-md text-xl w-full pl-4 shadow-lg h-14 "
+                            >
+                    <button class="bg-main h-14 w-14 rounded-r-md shadow-md active:bg-red-500 shadow-lg"><i class="fa-solid fa-magnifying-glass text-white fa-lg"></i></button>
+                </div>
                 <app-single-application></app-single-application>
                 <app-single-application></app-single-application>
                 <app-single-application></app-single-application>
                 <app-single-application></app-single-application>
             </div> 
         </div>
-</div>
+    </div>
+    </div>
