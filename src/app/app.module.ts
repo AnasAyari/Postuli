@@ -11,6 +11,7 @@ import { LoginComponent } from './forms/login/login.component';
 import { SingupComponent } from './forms/singup/singup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SingleApplicationComponent } from './single-application/single-application.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SingleApplicationComponent } from './single-application/single-applicat
     SingupComponent,
     ProfileComponent,
     ApplicationsComponent,
-    SingleApplicationComponent
+    SingleApplicationComponent,
+    JobDetailsComponent
   ],
   imports: [
     BrowserModule,
