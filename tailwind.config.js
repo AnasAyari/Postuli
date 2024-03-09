@@ -12,6 +12,7 @@ module.exports = {
         "shade":"#0F1035"
       }
     },
+    
   },
   plugins: [
     require('flowbite/plugin') // add this line
