@@ -9,11 +9,9 @@ import { ApplicationsComponent } from './applications/applications.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './forms/login/login.component';
 import { SingupComponent } from './forms/singup/singup.component';
-<<<<<<< HEAD
 import { ProfileComponent } from './profile/profile.component';
-=======
 import { SingleApplicationComponent } from './single-application/single-application.component';
->>>>>>> 22806197cd843b85e1ec64d43307974cf8cc2442
+
 
 @NgModule({
   declarations: [
@@ -23,12 +21,9 @@ import { SingleApplicationComponent } from './single-application/single-applicat
     FooterComponent,
     LoginComponent,
     SingupComponent,
-<<<<<<< HEAD
-    ProfileComponent
-=======
+    ProfileComponent,
     ApplicationsComponent,
     SingleApplicationComponent
->>>>>>> 22806197cd843b85e1ec64d43307974cf8cc2442
   ],
   imports: [
     BrowserModule,
