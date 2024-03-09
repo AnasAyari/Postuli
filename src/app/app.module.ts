@@ -5,25 +5,22 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './landing/header/header.component';
 import { BodyComponent } from './landing/body/body.component';
 import { FooterComponent } from './landing/footer/footer.component';
-import { ApplicationsComponent } from './applications/applications.component';
-import { SingleApplicationComponent } from './single-application/single-application.component';
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    FooterComponent,
-    ApplicationsComponent,
-    SingleApplicationComponent,
-
-
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LoginComponent,
+    SingupComponent,
+    ReactiveFormsModule,
+    ApplicationsComponent,
+    SingleApplicationComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
