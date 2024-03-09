@@ -34,4 +34,8 @@ export class ProfileComponent {
     const newSkill = 'New Skill';
     this.skills.push(newSkill);
   }
+
+  worker:boolean=false;
+  diffrent:boolean=true;
+
 }
