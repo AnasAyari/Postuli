@@ -13,6 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SingleApplicationComponent } from './single-application/single-application.component';
 import { AgentListComponent } from './agents/agent-list/agent-list.component';
 import { AgentComponent } from './agents/agent/agent.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AgentComponent } from './agents/agent/agent.component';
     ApplicationsComponent,
     SingleApplicationComponent,
     AgentListComponent,
-    AgentComponent
+    AgentComponent,
+    JobDetailsComponent 
   ],
   imports: [
     BrowserModule,
