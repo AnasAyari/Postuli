@@ -9,6 +9,7 @@ import { ApplicationsComponent } from './applications/applications.component';
 import { SingleApplicationComponent } from './single-application/single-application.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { SingleApplicationComponent } from './single-application/single-applicat
     FooterComponent,
     ApplicationsComponent,
     SingleApplicationComponent,
+
 
   ],
   imports: [
