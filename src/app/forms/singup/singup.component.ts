@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-singup',
   templateUrl: './singup.component.html',
@@ -53,8 +54,7 @@ export class SingupComponent implements OnInit {
 
     return pass === confirmPass ? null : { passwordMismatch: true }     
   }
-
-  navigato(){
+  navigateToLogin(){
     this.router.navigate(['/login'])
   }
 }
