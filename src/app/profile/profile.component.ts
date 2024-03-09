@@ -35,7 +35,7 @@ export class ProfileComponent {
     this.skills.push(newSkill);
   }
 
-  worker:boolean=false;
+  worker:boolean=true;
   diffrent:boolean=true;
 
 }
