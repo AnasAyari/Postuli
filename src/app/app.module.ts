@@ -11,6 +11,8 @@ import { LoginComponent } from './forms/login/login.component';
 import { SingupComponent } from './forms/singup/singup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SingleApplicationComponent } from './single-application/single-application.component';
+import { AgentListComponent } from './agents/agent-list/agent-list.component';
+import { AgentComponent } from './agents/agent/agent.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { SingleApplicationComponent } from './single-application/single-applicat
     SingupComponent,
     ProfileComponent,
     ApplicationsComponent,
-    SingleApplicationComponent
+    SingleApplicationComponent,
+    AgentListComponent,
+    AgentComponent
   ],
   imports: [
     BrowserModule,
