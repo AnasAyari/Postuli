@@ -1,0 +1,171 @@
+
+    <form [formGroup]="signupForm" class="max-w-md mx-auto p-12 shadow-lg rounded-lg">
+
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="email" id="email" formControlName="email"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" " required />
+            <label for="email"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter
+                your email</label>
+            <div *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched"
+                class="text-red-500 text-sm mt-1">
+                <div *ngIf="signupForm.get('email').errors.required">Email is required.</div>
+                <div *ngIf="signupForm.get('email').errors.email">Please enter a valid email address.</div>
+            </div>
+        </div>
+
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="password" id="password" formControlName="password"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" " required />
+            <label for="password"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter
+                your password</label>
+            <div *ngIf="signupForm.get('password').invalid && signupForm.get('password').touched"
+                class="text-red-500 text-sm mt-1">
+                <div *ngIf="signupForm.get('password').errors.required">Password is required.</div>
+                <div *ngIf="signupForm.get('password').errors.minlength">Password must be at least 6 characters
+                    long.</div>
+            </div>
+        </div>
+
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="password" id="repeatPassword" formControlName="repeatPassword"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" " required />
+            <label for="repeatPassword"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm
+                password</label>
+            <div *ngIf="signupForm.get('repeatPassword').invalid && signupForm.get('repeatPassword').touched"
+                class="text-red-500 text-sm mt-1">
+                <div *ngIf="signupForm.get('repeatPassword').errors.required">Please confirm your password.</div>
+                <div *ngIf="signupForm.get('repeatPassword').errors.passwordMismatch">Passwords do not match.</div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 md:gap-6">
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="text" id="firstName" formControlName="firstName"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " required />
+                <label for="firstName"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter
+                    your username</label>
+                <div *ngIf="signupForm.get('firstName').invalid && signupForm.get('firstName').touched"
+                    class="text-red-500 text-sm mt-1">First name is required.</div>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="text" id="lastName" formControlName="lastName"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " required />
+                <label for="lastName"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter
+                    your full name</label>
+                <div *ngIf="signupForm.get('lastName').invalid && signupForm.get('lastName').touched"
+                    class="text-red-500 text-sm mt-1">Last name is required.</div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-1 md:gap-6">
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="tel" id="phoneNumber" formControlName="phoneNumber"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                <label for="phoneNumber"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter
+                    your phone number</label>
+                <div *ngIf="signupForm.get('phoneNumber').invalid && signupForm.get('phoneNumber').touched"
+                    class="text-red-500 text-sm mt-1">Please enter a valid phone number.</div>
+            </div>
+        </div>
+
+        <div class="relative z-0 w-full mb-5 group">
+            <select id="accountType" formControlName="accountType"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
+                <option value="" disabled selected>Select account type</option>
+                <option value="worker">Worker</option>
+                <option value="enterprise">Enterprise</option>
+            </select>
+            <label for="accountType"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Select
+                account type</label>
+            <div *ngIf="signupForm.get('accountType').invalid && signupForm.get('accountType').touched"
+                class="text-red-500 text-sm mt-1">Account type is required.</div>
+        </div>
+
+        <div *ngIf="signupForm.get('accountType').value === 'worker'">
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="text" id="skillName" formControlName="skillName"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " required />
+                <label for="skillName"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter
+                    skill name</label>
+                <div *ngIf="signupForm.get('skillName').invalid && signupForm.get('skillName').touched"
+                    class="text-red-500 text-sm mt-1">Skill name is required.</div>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+                <select id="skillLevel" formControlName="skillLevel"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
+                    <option value="" disabled selected>Select skill level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+                <label for="skillLevel"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Select
+                    skill level</label>
+                <div *ngIf="signupForm.get('skillLevel').invalid && signupForm.get('skillLevel').touched"
+                    class="text-red-500 text-sm mt-1">Skill level is required.</div>
+            </div>
+            <button type="button" (click)="addSkill()"
+                class="text-white bg-gray-400 mb-4 hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                *ngIf="signupForm.get('accountType').value === 'worker'">Add Skill</button>
+        </div>
+
+        <div *ngIf="signupForm.get('accountType').value === 'enterprise'">
+
+            <div *ngIf="signupForm.get('accountType').value === 'enterprise'">
+
+        <div class="relative z-0 w-full mb-5 group">
+
+            <input type="text" id="secteurActivite" formControlName="secteurActivite" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="secteurActivite" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter sector of activity</label>
+            <div *ngIf="signupForm.get('secteurActivite').invalid && signupForm.get('secteurActivite').touched" class="text-red-500 text-sm mt-1">Sector of activity is required.</div>
+        </div>
+
+        <div class="relative z-0 w-full mb-5 group">
+
+            <input type="text" id="tailleDEntreprise" formControlName="tailleDEntreprise" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="tailleDEntreprise" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter taille DEntreprise</label>
+            <div *ngIf="signupForm.get('tailleDEntreprise').invalid && signupForm.get('tailleDEntreprise').touched" class="text-red-500 text-sm mt-1">Taille D'Entreprise is required.</div>
+        </div>
+
+        <div class="relative z-0 w-full mb-5 group">
+
+            <input type="text" id="chiffreAffaires" formControlName="chiffreAffaires" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="chiffreAffaires" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter chiffre d'affaires</label>
+            <div *ngIf="signupForm.get('chiffreAffaires').invalid && signupForm.get('chiffreAffaires').touched" class="text-red-500 text-sm mt-1">Chiffre d'affaires is required.</div>
+        </div>
+
+        <div class="relative z-0 w-full mb-5 group">
+
+            <input type="text" id="statutJuridique" formControlName="statutJuridique" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="statutJuridique" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter statut juridique</label>
+            <div *ngIf="signupForm.get('statutJuridique').invalid && signupForm.get('statutJuridique').touched" class="text-red-500 text-sm mt-1">Statut juridique is required.</div>
+        </div>
+
+        <div class="relative z-0 w-full mb-5 group">
+
+            <input type="text" id="paysDOrigine" formControlName="paysDOrigine" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="paysDOrigine" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter pays d'origine</label>
+            <div *ngIf="signupForm.get('paysDOrigine').invalid && signupForm.get('paysDOrigine').touched" class="text-red-500 text-sm mt-1">Pays d'origine is required.</div>
+        </div>
+    </div>
+        </div>
+
+        <button type="submit" [disabled]="signupForm.invalid"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+    </form>
+
