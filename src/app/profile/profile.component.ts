@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class ProfileComponent {
   experiences: any[] = []; // Array to store experiences
   skills: string[] = ['JavaScript', 'React', 'Node.js', 'HTML/CSS', 'Tailwind CSS']; // Initial skills
+  open:boolean = false;
+  openExperience:boolean = false;
 
   constructor() { }
 
@@ -21,7 +23,12 @@ export class ProfileComponent {
     };
     this.experiences.push(newExperience);
   }
-
+  openSkillForm(){
+    this.open = true;
+  }
+  openExperienceForm(){
+    this.openExperience = true;
+  }
   addSkill() {
     // Implement logic to add a new skill
     const newSkill = 'New Skill';
