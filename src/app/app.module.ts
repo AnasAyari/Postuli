@@ -13,7 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SingleApplicationComponent } from './single-application/single-application.component';
 import { AgentListComponent } from './agents/agent-list/agent-list.component';
 import { AgentComponent } from './agents/agent/agent.component';
-import { JobDetailsComponent } from './job-details/job-details.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 @NgModule({
@@ -29,7 +29,7 @@ import { JobDetailsComponent } from './job-details/job-details.component';
     SingleApplicationComponent,
     AgentListComponent,
     AgentComponent,
-    JobDetailsComponent 
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -42,3 +42,4 @@ import { JobDetailsComponent } from './job-details/job-details.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
