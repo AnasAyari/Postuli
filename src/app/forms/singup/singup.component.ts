@@ -47,8 +47,8 @@ export class SingupComponent implements OnInit {
 
 
   checkPasswords(group: FormGroup) { 
-    let pass = group.get('password').value;
-    let confirmPass = group.get('repeatPassword').value;
+    let pass = group.get('password')?.value;
+    let confirmPass = group.get('repeatPassword')?.value;
 
     return pass === confirmPass ? null : { passwordMismatch: true }     
   }
