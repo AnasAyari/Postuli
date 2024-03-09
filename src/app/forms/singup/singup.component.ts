@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-singup',
@@ -9,7 +11,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SingupComponent implements OnInit {
   signupForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,private router:Router) { }
 
   ngOnInit(): void {
     this.signupForm = this.fb.group({
@@ -51,5 +53,8 @@ export class SingupComponent implements OnInit {
     let confirmPass = group.get('repeatPassword')?.value;
 
     return pass === confirmPass ? null : { passwordMismatch: true }     
+  }
+  navigateToLogin(){
+    this.router.navigate(['/login'])
   }
 }
