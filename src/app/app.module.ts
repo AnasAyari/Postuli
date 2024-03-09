@@ -8,6 +8,7 @@ import { FooterComponent } from './landing/footer/footer.component';
 import { LoginComponent } from './forms/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SingupComponent } from './forms/singup/singup.component';
+import { ApplicationComponent } from './application/application.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SingupComponent } from './forms/singup/singup.component';
     BodyComponent,
     FooterComponent,
     LoginComponent,
-    SingupComponent
+    SingupComponent,
+    ApplicationComponent
   ],
   imports: [
     BrowserModule,
