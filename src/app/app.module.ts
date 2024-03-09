@@ -11,7 +11,8 @@ import { LoginComponent } from './forms/login/login.component';
 import { SingupComponent } from './forms/singup/singup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SingleApplicationComponent } from './single-application/single-application.component';
-import { JobDetailsComponent } from './job-details/job-details.component';
+import { AgentListComponent } from './agents/agent-list/agent-list.component';
+import { AgentComponent } from './agents/agent/agent.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { JobDetailsComponent } from './job-details/job-details.component';
     ProfileComponent,
     ApplicationsComponent,
     SingleApplicationComponent,
-    JobDetailsComponent
+    AgentListComponent,
+    AgentComponent
   ],
   imports: [
     BrowserModule,
